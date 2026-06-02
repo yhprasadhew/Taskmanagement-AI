@@ -1,19 +1,26 @@
 const mongoose = require("mongoose");
 
-const empSchema = new mongoose.Schema({
-    Tasktitle: {
-        type: String,
-        required: true,
-        unique: true
-        },
-        TaskDescription: {
-        type: String,
-        required: true
-        },
-        empName: {
-        type: [String],
-        required: true
-        },  
+const taskSchema = new mongoose.Schema(
+  {
+    taskTitle: {
+      type: String,
+      required: true,
+      unique: true,
+    },
 
-});
-module.exports = mongoose.model("Employee", empSchema);
+    taskDescription: {
+      type: String,
+      required: true,
+    },
+
+    employeeName: {
+      type: String,
+      required: true,
+    },
+  },
+  {
+    timestamps: true,
+  }
+);
+
+module.exports = mongoose.model("Task", taskSchema);
