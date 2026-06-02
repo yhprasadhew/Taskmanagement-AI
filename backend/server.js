@@ -21,6 +21,9 @@ mongoose
   });
 
 app.use("/api/employee", empRoutes);
+const taskRoutes = require("./routes/taskRoute");
+
+app.use("/api/task", taskRoutes);
 
 const PORT = process.env.PORT || 5000;
 

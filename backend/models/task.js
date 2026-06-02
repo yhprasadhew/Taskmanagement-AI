@@ -17,6 +17,21 @@ const taskSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+
+    estimatedDeadline: {
+      type: String,
+      default: "",
+    },
+
+    aiReason: {
+      type: String,
+      default: "",
+    },
+
+    status: {
+      type: String,
+      default: "Pending",
+    },
   },
   {
     timestamps: true,

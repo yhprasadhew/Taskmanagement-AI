@@ -20,7 +20,19 @@ exports.createEmp = async (req, res) => {
   }
 };
 
-// Get Employee by ID
+// Get All Employees
+exports.getAllEmp = async (req, res) => {
+  try {
+    const employees = await Employee.find();
+
+    res.status(200).json(employees);
+  } catch (error) {
+    console.log("Error fetching employees:", error);
+    res.status(500).json({ message: error.message });
+  }
+};
+
+// Get Employee By ID
 exports.getEmp = async (req, res) => {
   try {
     const employee = await Employee.findById(req.params.id);
@@ -31,7 +43,7 @@ exports.getEmp = async (req, res) => {
       });
     }
 
-    res.json(employee);
+    res.status(200).json(employee);
   } catch (error) {
     console.log("Error while fetching employee:", error);
     res.status(500).json({ message: error.message });
