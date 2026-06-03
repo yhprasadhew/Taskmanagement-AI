@@ -14,7 +14,7 @@ function App() {
     // Fetch employee list from backend and populate the dropdown
     const fetchEmployees = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/employee/empList");
+        const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/employee/empList`);
         setEmployees(res.data);
         console.log("Employee List:", res.data);
       } catch (error) {

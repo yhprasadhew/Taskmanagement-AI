@@ -17,8 +17,9 @@ return;
 
 try {
   const res = await axios.post(
-    "http://localhost:5000/api/ai/recommend",
+    `${import.meta.env.VITE_API_URL}/api/ai/recommend`,
     {
+     
       taskTitle,
       taskDescription,
     }
@@ -67,7 +68,7 @@ try {
   };
 
   const res = await axios.post(
-    "http://localhost:5000/api/task/create",
+    `${import.meta.env.VITE_API_URL}/api/task/create`,
     taskData
   );
 
