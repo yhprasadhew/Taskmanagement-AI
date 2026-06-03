@@ -5,7 +5,7 @@ const router = express.Router();
 const {
   createTask,
   getTasks,
-} = require("../controller/taskController");
+} = require("../controller/taskcontroller");
 
 router.post("/create", createTask);
 
