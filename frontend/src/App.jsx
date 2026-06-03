@@ -1,8 +1,9 @@
-import Header from "./components/Header";
-import EmployeeMng from "./components/EmployeeMng";
+import Header from "./components/header";
+import EmployeeMng from "./components/employeemng";
 import TaskMng from "./components/Taskmngmt";
 import { useEffect ,useState } from "react";
 import axios from "axios";
+
 
 function App() {
 
