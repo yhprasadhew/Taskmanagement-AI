@@ -5,7 +5,6 @@ const taskSchema = new mongoose.Schema(
     taskTitle: {
       type: String,
       required: true,
-      unique: true,
     },
 
     taskDescription: {
@@ -26,11 +25,6 @@ const taskSchema = new mongoose.Schema(
     aiReason: {
       type: String,
       default: "",
-    },
-
-    status: {
-      type: String,
-      default: "Pending",
     },
   },
   {
